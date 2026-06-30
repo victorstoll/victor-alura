@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas Climáticos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #e0f7fa; 
+            padding: 50px; 
+        }
+        .container { 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+            max-width: 500px; 
+            margin: auto; 
+        }
+        h1 { 
+            color: #d32f2f; 
+        }
+        p { 
+            color: #555; 
+            font-size: 18px; 
+            line-height: 1.5;
+        }
+        button { 
+            background-color: #388e3c; 
+            color: white; 
+            border: none; 
+            padding: 12px 20px; 
+            font-size: 16px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-top: 15px;
+        }
+        button:hover { 
+            background-color: #2e7d32; 
+        }
+        #dica {
+            margin-top: 20px; 
+            font-weight: bold; 
+            color: #1565c0;
+            min-height: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Alerta Climático 🌍</h1>
+        <p>As mudanças climáticas estão causando o derretimento das geleiras, secas extremas e a destruição de habitats naturais. Precisamos agir agora!</p>
+        
+        <button onclick="gerarDica()">Como eu posso ajudar?</button>
+        
+        <p id="dica"></p>
+    </div>
+
+    <script>
+        function gerarDica() {
+            const dicas = [
+                "🌱 Plante uma árvore ou faça uma pequena horta.",
+                "🚲 Use a bicicleta ou caminhe em vez de andar de carro.",
+                "💧 Feche a torneira enquanto escova os dentes para economizar água.",
+                "♻️ Separe o seu lixo reciclável do orgânico.",
+                "🔌 Desligue os aparelhos da tomada quando não estiver usando."
+            ];
+            
+            // Sorteia uma dica aleatória da lista acima
+            const dicaSorteada = dicas[Math.floor(Math.random() * dicas.length)];
+            
+            // Mostra a dica na tela
+            document.getElementById("dica").innerText = dicaSorteada;
+        }
+    </script>
+
+</body>
+</html>
